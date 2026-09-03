@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "MDK"
+id = "SLES-00599"
+players = 1
+exe = "disc/SLES_005.99"
+disc = "disc/MDK (Europe) (En,Fr,De,Es,It).cue"
+load_address = "0x80010000"
+entry_pc = "0x800933D4"
+text_size = "0x000B4000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "MDK (Europe) (En,Fr,De,Es,It) (Track 01).bin"
+cue_name = "MDK (Europe) (En,Fr,De,Es,It).cue"
+boot_exe = "SLES_005.99"
+known_sizes = [108351936]
+known_md5 = [
+  "5f2019296a72b979f9c019d85c867705",
+]
+known_sha1 = [
+  "c59f5cec719fd43df0ff763b7cc2e9584be4b4fe",
+]
+known_crc32 = [
+  "3b9c4744",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+strict = true
+
+[runtime]
+window_title = "MDK Recompiled"
+memcard_dir = "saves"
+bios_hle = false
+openbios = false
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 30
+required_disc_fp = "0253f7e0a633ea2b4b6d84a741cce395c9caaad9e7c837f2844ee0e9c6178cc5"

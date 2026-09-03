@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "MDK",
+    "id": "SLES-00599",
+    "boot_exe": "SLES_005.99"
+  },
+  "marketing": {
+    "description": "MDK recompiled for modern systems using psxrecomp.",
+    "publisher": "Interplay",
+    "year": "1997",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "MDK (Europe) (En,Fr,De,Es,It).cue",
+    "bin_name": "MDK (Europe) (En,Fr,De,Es,It) (Track 01).bin",
+    "track_counts": [
+      30
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 108351936,
+      "md5": "5f2019296a72b979f9c019d85c867705",
+      "sha1": "c59f5cec719fd43df0ff763b7cc2e9584be4b4fe",
+      "sha256": "29c584e75668153d48874efa2759e404374d2b48fc694b8ce4240755cb67a253",
+      "crc32": "3b9c4744"
+    },
+    "disc_fp": "0253f7e0a633ea2b4b6d84a741cce395c9caaad9e7c837f2844ee0e9c6178cc5"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x800933D4",
+    "text_size": "0x000B4000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1146,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

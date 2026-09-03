@@ -1,0 +1,29 @@
+{
+  "cue_name": "MDK (Europe) (En,Fr,De,Es,It).cue",
+  "bin_name": "MDK (Europe) (En,Fr,De,Es,It) (Track 01).bin",
+  "track_count": 30,
+  "data_track_size": 108351936,
+  "data_track_md5": "5f2019296a72b979f9c019d85c867705",
+  "data_track_sha1": "c59f5cec719fd43df0ff763b7cc2e9584be4b4fe",
+  "data_track_sha256": "29c584e75668153d48874efa2759e404374d2b48fc694b8ce4240755cb67a253",
+  "data_track_crc32": "3b9c4744",
+  "boot_exe": "SLES_005.99",
+  "serial": "SLES-00599",
+  "serial_exe": "SLES_005.99",
+  "volume_id": "",
+  "display_name": "MDK",
+  "load_address": "0x80010000",
+  "entry_pc": "0x800933D4",
+  "text_size": "0x000B4000",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "0253f7e0a633ea2b4b6d84a741cce395c9caaad9e7c837f2844ee0e9c6178cc5",
+  "boot_exe_sha256": "d80358840ef1e5b8e2b5d7ef775af9f10c52c31fc497898fd8d9bbf94468a181",
+  "seed_count": 1146,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
